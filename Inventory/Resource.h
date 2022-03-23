@@ -7,19 +7,23 @@ class Resource
 protected:
 	std::string type_of_resource;
 	float weight_of_resource;
+	std::string rarity;
 
 public:
 	Resource();
-	Resource(std::string, float);
+	Resource(std::string, float, std::string);
 	Resource(const Resource& source);
-	~Resource();
+	virtual ~Resource();
+
 
 	//Getters and Setters
-	std::string get_type();
-	float get_weight();
+	std::string get_type() const;
+	float get_weight() const;
+	std::string get_rarity() const;
 
 	void set_type(std::string type);
 	void set_weight(float weight);
+	void set_rarity(std::string);
 
 	// Operator overloading
 	// Input & Output overloading

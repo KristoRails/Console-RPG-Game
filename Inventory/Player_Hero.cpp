@@ -12,6 +12,16 @@ Player_Hero::Player_Hero(std::string name, float h, float e, float b, int l, flo
 	//
 }
 
+Player_Hero::~Player_Hero()
+{
+	std::cout << "Hero destroyed" << std::endl;
+}
+
+void Player_Hero::type_of_player()
+{
+	std::cout << "I am a hero" << std::endl;
+}
+
 void Player_Hero::inventory()
 {
 	player_inventory.addResources(3);

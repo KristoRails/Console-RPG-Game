@@ -14,7 +14,9 @@ protected:
 public:
 	Player();
 	Player(const std::string, const float, const float, const float, const int);
-	~Player();
+	virtual ~Player();
+
+	virtual void type_of_player();
 
 	//Copy Constructor
 	Player(const Player& source);
@@ -32,15 +34,15 @@ public:
 	void operator=(const float);
 
 	//Getters & Setters
-	std::string get_name();
-	float get_health();
-	float get_experience();
-	float get_balance();
-	int get_level();
+	std::string get_name() const;
+	float get_health() const;
+	float get_experience() const;
+	float get_balance() const;
+	int get_level() const;
 
-	void set_name(std::string name);
-	void set_health(float health);
-	void set_experience(float experience);
-	void set_balance(float balance);
-	void set_level(int level);
+	virtual void set_name(std::string name);
+	virtual void set_health(float health);
+	virtual void set_experience(float experience);
+	virtual void set_balance(float balance);
+	virtual void set_level(int level);
 };

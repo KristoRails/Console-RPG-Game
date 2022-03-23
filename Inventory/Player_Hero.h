@@ -12,7 +12,9 @@ private:
 public:
 	Player_Hero();
 	Player_Hero(std::string, float, float, float, int, float, float);
+	virtual ~Player_Hero();
 
+	void type_of_player();
 	void inventory();
 	void get_inventory();
 

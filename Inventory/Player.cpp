@@ -14,6 +14,11 @@ Player::~Player()
 {
 }
 
+void Player::type_of_player()
+{
+	std::cout << "I am a normal player" << std::endl;
+}
+
 Player::Player(const Player& source)
 	:Player(source.name, source.health, source.experience, source.balance, source.level)
 {
@@ -47,29 +52,30 @@ void Player::operator=(const float experience)
 	this->experience += experience;
 }
 
+
 // Setters and Getters
 
-std::string Player::get_name()
+std::string Player::get_name() const
 {
 	return this->name;
 }
 
-float Player::get_health()
+float Player::get_health() const
 {
 	return this->health;
 }
 
-float Player::get_experience()
+float Player::get_experience() const
 {
 	return this->experience;
 }
 
-float Player::get_balance()
+float Player::get_balance() const
 {
 	return this->balance;
 }
 
-int Player::get_level()
+int Player::get_level() const
 {
 	return this->level;
 }
